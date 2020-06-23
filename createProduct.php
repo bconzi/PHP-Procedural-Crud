@@ -70,7 +70,7 @@
                 $brand == 'test' || $modell=='test' :
                     $code = "0000";
                     break;
-                default: echo 'This Brand doesnt exists or is misswritten, needs first letter Uppercase then lowercase!';
+                default: echo 'This Brand doesnt exists or is misswritten, please write first letter Uppercase then lowercase!';
                     break;
             }
 
@@ -127,7 +127,7 @@
     </p>    
     
     <div style="justify-content: space-between; margin: 30px auto;">
-    <a href="usersArea.php"><input type="button" class="button" name="back" value="Back"></a>
+    <a href="usersArea.php?action=load"><input type="button" class="button" name="back" value="Back"></a>
     </div>
        <div style="text-align: right;width:1020px; ">
           <a href="closeSession.php"><input type="button" class= "button" name="btn" value="Close Session" </a>
