@@ -16,7 +16,7 @@ require_once 'connection.php';
 $search= filter_input(INPUT_POST, 'search');
 
 
-$sql="SELECT * FROM CELLPHONES WHERE BRAND LIKE '%$search%' OR MODELL LIKE '%$search%'";
+$sql="SELECT * FROM CELLPHONES WHERE BRAND LIKE '%$search%' OR MODELL LIKE '%$search%' OR CODE LIKE '%$search%'";
 
 $result=$base->prepare($sql);
 
@@ -31,9 +31,10 @@ $rows_qty=$result->rowCount();
 
 while($register=$result->fetch(PDO::FETCH_ASSOC)){
         
-        
-        echo '<table><tr><td>Brand: '. $register['brand'].'</td></tr>';
-        echo '<tr><td>Modell: '.$register['modell'].'</td></tr></table';
+    echo '<table>';
+        echo '<tr><td>Brand: '. $register['brand'].'</td></tr>';
+        echo '<tr><td>Modell: '.$register['modell'].'</td></tr>';
+        echo '</table';
     }
 }
 
