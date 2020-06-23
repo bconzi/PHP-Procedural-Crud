@@ -21,6 +21,7 @@
         <form method="post" action="search.php">
             <input type="text" name="search" placeholder="Search Product">
             <input type="submit" id="sub" value="Go">
+            
         </form>
 
         <form method="POST" action="">
