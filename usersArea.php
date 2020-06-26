@@ -8,6 +8,7 @@
 
         <?php
         session_start();
+        
         if (isset($_SESSION['us'])) {
             echo 'User ' . $_SESSION['us'];
         }
@@ -18,11 +19,14 @@
             
         </p>
     <center>
+<!--        Search field-->
         <form method="post" action="search.php">
-            <input type="text" name="search" placeholder="Search Product">
+            <input type="text" name="search" placeholder="Search by Product, Brand or Modell">
             <input type="submit" id="sub" value="Go">
             
         </form>
+
+<!--Products table-->
 
         <form method="POST" action="">
 
@@ -39,11 +43,7 @@
 
                 <?php
                 require_once 'connection.php';
-
-
-
-                echo'<p></p>';
-
+                
                 //----Pagination
 
 
