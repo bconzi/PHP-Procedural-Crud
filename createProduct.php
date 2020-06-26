@@ -83,10 +83,19 @@
 
             $register->execute(array(':br' => $brand, ':mod' => $modell, ':cd' => $code));
 
-            echo 'Product succesfully created on database';
+            $count_regist= $register->rowCount();
             
+            if ( $count_regist<1){
             header("Location:usersArea.php");
+            } else {
+              
+                echo 'Product succesfully created on database';
+              
+              header("Location:usersArea.php");
+            }
+            
         }
+        
         ?>
         <p>
             &nbsp;</p>
@@ -127,7 +136,7 @@
     </p>    
     
     <div style="justify-content: space-between; margin: 30px auto;">
-    <a href="usersArea.php?action=load"><input type="button" class="button" name="back" value="Back"></a>
+        <a href="usersArea.php"><input type="button" class="button" name="back" value="Back"></a>
     </div>
        <div style="text-align: right;width:1020px; ">
           <a href="closeSession.php"><input type="button" class= "button" name="btn" value="Close Session" </a>
