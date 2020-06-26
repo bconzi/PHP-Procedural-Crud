@@ -11,6 +11,11 @@ table {
      width: 60%;
      text-align:center;
 }
+.primera_fila{
+
+    background-color:#ccccff;
+      }
+
 table td{
 	text-align:center;
 	border:1px #2c3e50 solid;
